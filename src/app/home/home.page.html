@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <label class="nav-head">COVID-19</label>
+    <!-- <img class="nav-left" src="../../assets/img/cough.png" alt=""/> -->
+    <img class="nav-right" src="../../assets/img/coronalogo.png" alt=""/>
+    <label class="head-world-cc">Total Confirmed</label>
+    <label class="head-world-count">{{WorldTotalCC}}</label>
+    <label class="head-world-dc">Total Death</label>
+    <label class="head-world-dcount">{{WorldTotalDC}}</label>
+    <label class="head-world-rc">Total Recovered</label>
+    <label class="head-world-rcount">{{WorldTotalRC}}</label>
+    <div class="scrolling-wrapper">
+      <div (click)="SendData(1);" class="card"><label class="country">{{c1name}}</label>
+        <img class="flag" src="https://www.countryflags.io/{{c1code}}/flat/64.png">
+      <label class="totalCCL">Confirmed Cases</label>
+      <label class="totalCC">{{c1TotalCC}}</label>
+      <label class="totalCDL">Death Cases</label>
+      <label class="totalCD">{{c1TotalCD}}</label>
+      <label class="totalCRL">Recovered Cases</label>
+      <label class="totalCR">{{c1TotalCR}}</label>
+
+      </div>
+      <div (click)="SendData(2);" class="card"><label class="country">{{c2name}}</label>
+        <img class="flag" src="https://www.countryflags.io/{{c2code}}/flat/64.png"/>
+        <label class="totalCCL">Confirmed Cases</label>
+        <label class="totalCC">{{c2TotalCC}}</label>
+        <label class="totalCDL">Death Cases</label>
+        <label class="totalCD">{{c2TotalCD}}</label>
+        <label class="totalCRL">Recovered Cases</label>
+        <label class="totalCR">{{c2TotalCR}}</label>
+
+      </div>
+      <div (click)="SendData(3);" class="card"><label class="country">{{c3name}}</label>
+        <img class="flag" src="https://www.countryflags.io/{{c3code}}/flat/64.png"/>
+        <label class="totalCCL">Confirmed Cases</label>
+        <label class="totalCC">{{c3TotalCC}}</label>
+        <label class="totalCDL">Death Cases</label>
+        <label class="totalCD">{{c3TotalCD}}</label>
+        <label class="totalCRL">Recovered Cases</label>
+        <label class="totalCR">{{c3TotalCR}}</label>
+
+      </div>
+      <div (click)="SendData(4);" class="card"><label class="country">{{c4name}}</label>
+        <img class="flag" src="https://www.countryflags.io/{{c4code}}/flat/64.png"/>
+        <label class="totalCCL">Confirmed Cases</label>
+        <label class="totalCC">{{c4TotalCC}}</label>
+        <label class="totalCDL">Death Cases</label>
+        <label class="totalCD">{{c4TotalCD}}</label>
+        <label class="totalCRL">Recovered Cases</label>
+        <label class="totalCR">{{c4TotalCR}}</label>
+
+      </div>
+      <div (click)="SendData(5);" class="card"><label class="country">{{c5name}}</label>
+        <img class="flag" src="https://www.countryflags.io/{{c5code}}/flat/64.png"/>
+        <label class="totalCCL">Confirmed Cases</label>
+        <label class="totalCC">{{c5TotalCC}}</label>
+        <label class="totalCDL">Death Cases</label>
+        <label class="totalCD">{{c5TotalCD}}</label>
+        <label class="totalCRL">Recovered Cases</label>
+        <label class="totalCR">{{c5TotalCR}}</label>
+      </div>
+      <div class="card"><label class="country"></label>
+        <img routerLink="/list" class="nextIcon" src="../../assets/icon/nextIcon.png"/>
+
+      </div>
+    </div>
+
+
+
+   <div class="days"> 
+      
+   </div>
+  </div>
+</ion-content>
