@@ -99,7 +99,7 @@ export class ListComponent implements OnInit {
       console.log(this.data[0]['code']);
       this.data.sort(this.sortByProperty("totalConfirm"));
       //this.data.length
-        for(let k=0;k<100;k++){
+        for(let k=0;k<50;k++){
           var markup = "<div class='card' id="+this.data[k]['name']+"><img class='flag' src=https://www.countryflags.io/"+this.data[k]['code']+"/flat/24.png><label class='country'>"+this.data[k]['name']+"</label></div>"; 
           var listDiv = $(".scrolling-wrapper");                                              
           listDiv.append(markup); 
@@ -271,120 +271,190 @@ export class ListComponent implements OnInit {
           localStorage.setItem("name",name);
           window.location.href = "/info";
         });
-        
-
-        ////////////////////////////////////////////////////////////
-
-        $(window).scroll(function(){
- 
-          var position = $(window).scrollTop();
-          var bottom = $(document).height() - $(window).height();
-        
-          if( position == bottom ){
-            alert();
-            for(let k=11;k<150;k++){
-              var markup = "<div class='card' id="+this.data[k]['name']+"><img class='flag' src=https://www.countryflags.io/"+this.data[k]['code']+"/flat/24.png><label class='country'>"+this.data[k]['name']+"</label></div>"; 
-              var listDiv = $(".scrolling-wrapper");                                              
-              listDiv.append(markup); 
-              if(window.matchMedia("(max-width: 320px)").matches) {  
-                $(".flag").css("width","45px"); 
-                $(".flag").css("height","45px"); 
-                $(".flag").css("left","20px"); 
-                $(".flag").css("border-radius","40px");
-                $(".flag").css("position","absolute");
-                $(".flag").css("top","10px"); 
-                $(".country").css("top","23px"); 
-                $(".country").css("left","110px"); 
-                $(".country").css("font-size","18px"); 
-                $(".country").css("color","black"); 
-                $(".country").css("position","absolute");
-                $(".card").css("background-color","white"); 
-                $(".card").css("font-weight","bold"); 
-                $(".card").css("left","20px"); 
-                $(".card").css("border-radius","15px");
-                $(".card").css("height","65px");
-                $(".card").css("width","255px"); 
-                $(".card").css("margin-top","10px");
-                $(".card").css("margin-left","10px");
-                $(".card").css("margin-right","10px");
-                $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
-              } else if(window.matchMedia("(max-width: 360px)").matches) {  
-                $(".flag").css("width","45px"); 
-                $(".flag").css("height","45px"); 
-                $(".flag").css("left","20px"); 
-                $(".flag").css("border-radius","40px");
-                $(".flag").css("position","absolute");
-                $(".flag").css("top","10px"); 
-                $(".country").css("top","23px"); 
-                $(".country").css("left","110px"); 
-                $(".country").css("font-size","18px"); 
-                $(".country").css("color","black"); 
-                $(".country").css("position","absolute");
-                $(".card").css("background-color","white"); 
-                $(".card").css("font-weight","bold"); 
-                $(".card").css("left","20px"); 
-                $(".card").css("border-radius","15px");
-                $(".card").css("height","65px");
-                $(".card").css("width","270px"); 
-                $(".card").css("margin-top","10px");
-                $(".card").css("margin-left","10px");
-                $(".card").css("margin-right","10px");
-                $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
-              } else if(window.matchMedia("(max-width: 375px)").matches) {  
-                $(".flag").css("width","45px"); 
-                $(".flag").css("height","45px"); 
-                $(".flag").css("left","20px"); 
-                $(".flag").css("border-radius","40px");
-                $(".flag").css("position","absolute");
-                $(".flag").css("top","10px"); 
-                $(".country").css("top","23px"); 
-                $(".country").css("left","110px"); 
-                $(".country").css("font-size","18px"); 
-                $(".country").css("color","black"); 
-                $(".country").css("position","absolute");
-                $(".card").css("background-color","white"); 
-                $(".card").css("font-weight","bold"); 
-                $(".card").css("left","20px"); 
-                $(".card").css("border-radius","15px");
-                $(".card").css("height","65px");
-                $(".card").css("width","280px"); 
-                $(".card").css("margin-top","10px");
-                $(".card").css("margin-left","10px");
-                $(".card").css("margin-right","10px");
-                $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
-              }
-              else{
-                $(".flag").css("width","60px"); 
-                $(".flag").css("height","60px"); 
-                $(".flag").css("left","20px"); 
-                $(".flag").css("border-radius","40px");
-                $(".flag").css("position","absolute");
-                $(".flag").css("top","10px"); 
-                $(".country").css("top","30px"); 
-                $(".country").css("left","110px"); 
-                $(".country").css("font-size","20px"); 
-                $(".country").css("color","black"); 
-                $(".country").css("position","absolute");
-                $(".card").css("background-color","white"); 
-                $(".card").css("font-weight","bold"); 
-                $(".card").css("left","20px"); 
-                $(".card").css("border-radius","15px");
-                $(".card").css("height","85px");
-                $(".card").css("width","340px"); 
-                $(".card").css("margin-top","10px");
-                $(".card").css("margin-left","10px");
-                $(".card").css("margin-right","10px");
-                $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");  
-              }
-            }
-
-          }
-        });
-
-        /////////////////////////////////////////////////////////////////////
     });
            
   }
+
+  onKey(searchItem){
+      $(".scrolling-wrapper").empty();
+      let len=this.data.length;
+      if(!searchItem){
+        len=50;
+      }
+      for(let i=0;i<len;i++){
+        if(this.data[i]['name'].toLowerCase().includes(searchItem.toLowerCase())){
+          var markup = "<div class='card' id="+this.data[i]['name']+"><img class='flag' src=https://www.countryflags.io/"+this.data[i]['code']+"/flat/24.png><label class='country'>"+this.data[i]['name']+"</label></div>"; 
+          var listDiv = $(".scrolling-wrapper");                                              
+          listDiv.append(markup); 
+          if(window.matchMedia("(max-width: 320px)").matches) {  
+            $(".flag").css("width","45px"); 
+            $(".flag").css("height","45px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","23px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","18px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","70px");
+            $(".card").css("width","260px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          } 
+          else if(window.matchMedia("(max-width: 360px)").matches) {  
+            $(".flag").css("width","45px"); 
+            $(".flag").css("height","45px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","23px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","18px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","65px");
+            $(".card").css("width","270px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          }
+           else if(window.matchMedia("(max-width: 375px)").matches) {  
+            $(".flag").css("width","45px"); 
+            $(".flag").css("height","45px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","23px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","18px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","75px");
+            $(".card").css("width","310px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          }
+          else if((window.matchMedia("(max-width: 411px)").matches) && (window.matchMedia("(max-height: 731px)").matches)) {  
+            $(".flag").css("width","45px"); 
+            $(".flag").css("height","45px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","23px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","18px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","75px");
+            $(".card").css("width","310px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          }
+          else if(window.matchMedia("(max-width: 414px)").matches) {  
+            $(".flag").css("width","45px"); 
+            $(".flag").css("height","45px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","23px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","18px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","75px");
+            $(".card").css("width","310px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          }
+          else if(window.matchMedia("(max-width: 768px)").matches) {  
+            $(".flag").css("width","130px"); 
+            $(".flag").css("height","93px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","35px"); 
+            $(".country").css("left","165px"); 
+            $(".country").css("font-size","38px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","120px");
+            $(".card").css("width","545px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");
+          }
+          else{
+            $(".flag").css("width","60px"); 
+            $(".flag").css("height","60px"); 
+            $(".flag").css("left","20px"); 
+            $(".flag").css("border-radius","40px");
+            $(".flag").css("position","absolute");
+            $(".flag").css("top","10px"); 
+            $(".country").css("top","30px"); 
+            $(".country").css("left","110px"); 
+            $(".country").css("font-size","20px"); 
+            $(".country").css("color","black"); 
+            $(".country").css("position","absolute");
+            $(".card").css("background-color","white"); 
+            $(".card").css("font-weight","bold"); 
+            $(".card").css("left","20px"); 
+            $(".card").css("border-radius","15px");
+            $(".card").css("height","75px");
+            $(".card").css("width","315px"); 
+            $(".card").css("margin-top","10px");
+            $(".card").css("margin-left","10px");
+            $(".card").css("margin-right","10px");
+            $(".card").css("box-shadow","0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)");  
+          }
+        }
+      }
+      $(".card").click(function(){
+        var name = $(this).attr('id');
+        localStorage.setItem("name",name);
+        window.location.href = "/info";
+      });
+  }
+  
   back(){
     window.location.href = "/home";
   }
