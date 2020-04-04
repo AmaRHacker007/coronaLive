@@ -22,6 +22,7 @@ export class InformationComponent implements OnInit {
   TodayCC=0;
   TodayCD=0;
   TotalPL=0;
+  locate="";
   constructor(private router: Router,private _httpService:InformationService){ }
   sortByProperty(property){  
     return function(a,b){  
@@ -143,6 +144,9 @@ export class InformationComponent implements OnInit {
 
     });
     
+  }
+  back(){
+    this.router.navigate(["/list"]);
   }
 
 
