@@ -10,8 +10,7 @@
     <!-- <img class="nav-left" src="../../assets/img/cough.png" alt=""/> -->
     <i class="fa fa-arrow-left" (click)="back()"></i>
     <img class="nav-right" src="../../assets/img/coronalogo.png" alt=""/>
-    <input #search type="text" class="search" placeholder="Search Counrty" (keyup)="onKey(search.value)"/>
-    <!-- (keyup)="onKey($event)" -->
+    <input #search type="text" maxlength="15" class="search" placeholder="Search Counrty" (keyup)="onKey(search.value)"/>
     <div class="scrolling-wrapper">
 
     </div>
