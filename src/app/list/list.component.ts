@@ -134,7 +134,7 @@ export class ListComponent implements OnInit {
      
 
 
-        for(let k=0;k<40;k++){
+        for(let k=0;k<30;k++){
           var markup = "<div class='card' id="+this.data[k]['name']+"><img class='flag' src=https://www.countryflags.io/"+this.data[k]['code']+"/flat/24.png><label class='country'>"+this.data[k]['name']+"</label></div>"; 
           var listDiv = $(".scrolling-wrapper");                                              
           listDiv.append(markup); 
@@ -174,7 +174,7 @@ export class ListComponent implements OnInit {
       $(".scrolling-wrapper").empty();
       let len=this.data.length;
       if(!searchItem){
-        len=40;
+        len=30;
       }
       for(let i=0;i<len;i++){
         if(this.data[i]['name'].toLowerCase().includes(searchItem.toLowerCase())){
@@ -186,8 +186,8 @@ export class ListComponent implements OnInit {
             $(".flag").css("margin-left","10%"); 
             $(".flag").css("border-radius","40px");
             $(".flag").css("margin-top","2%"); 
-            $(".country").css("margin-top","2%"); 
-            $(".country").css("margin-left","2%"); 
+            $(".country").css("margin-top","10%"); 
+            $(".country").css("margin-left","35%");
             $(".country").css("font-size","18px"); 
             $(".country").css("position","absolute");
             $(".country").css("color","black"); 
