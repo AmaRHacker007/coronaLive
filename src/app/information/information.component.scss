@@ -12,13 +12,7 @@
     font-size: 20px;
     line-height: 26px;
   }
-  .fa-arrow-left{
-    font-size:34px;
-    color:white;
-    position: absolute;
-    top:30px;
-    left: 20px;
-  }
+
   #container p {
     font-size: 16px;
     line-height: 22px;
@@ -35,29 +29,39 @@
   ion-content ion-toolbar {
     --background: translucent;
   }
-  .days{
-      bottom: 20px;
-      left:10px;
-      position: absolute;
+  .fa-arrow-left{
+    font-size:34px;
+    color:white;
+    position: absolute;
+    top:30px;
+    left: 20px;
   }
-  .btnDays{
-     border-radius: 30px;
-     background-color: white;
-     margin-left: 10px;
-     margin-right: 10px;
-     width: 60px;
-     height: 40px;
+  .nav-right{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 18px;
+    left: 345px;
+  }
+  .nav-head{
+    font-weight: bold;
+    font-size: 33px;
+    font-family: "Convergence";
+    position: absolute;
+    top: 26px;
+    left: 185px;
+    color: white;
   }
   .card{
     background-color: white;
     font-weight: bold;
-    height: 480px;
-    width: 340px;
-    left: 20px;
-    margin-top: 0px;
+    height: 75%;
+    width: 85%;
+    margin: auto;
+    /* margin-top: 0px; */
     border-radius: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     
   }
@@ -68,32 +72,13 @@
     overflow-x: hidden;
     overflow-y: scroll;
     white-space: nowrap;
-    margin-top: 150px;
-    height: 500px;
+    margin-top: 30%;
+    height: 90%;
     
   }
   
   ::-webkit-scrollbar {
     display: none;
-    }
-    .circle{
-      margin-top: 30px;
-      margin-left: 320px;
-      width: 60px;
-      height: 60px;
-      border-radius: 40px;
-      //background-image: url("../../assets/img/coronalogo.png");
-    }
-    .events{
-      width: 80px;
-      height: 35px;
-      background-color: rgb(243, 28, 28);
-      border-radius: 20px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      color: white;
-      top: 50px;
-      left: 80px;
-      position: absolute;
     }
     .country{
       top: 35px;
@@ -109,111 +94,6 @@
     width: 100px;
     left: 20px;
   }
-  .nextIcon{
-    position: absolute;
-    top: 105px;
-    width: 65px;
-    left: 40px;
-  }
-  .date{
-    top: 110px;
-    left: 30px;
-    position: absolute;
-    color: white;
-  }
-  .title{
-    position: absolute;
-    top: 140px;
-    left: 30px;
-    font-size: 28px;
-    color: white;
-  }
-  .totalCC{
-    position: absolute;
-    top: 135px;
-    left: 25px;
-    font-size: 27px;
-    color: red;
-  }
-  .totalCD{
-    position: absolute;
-      top: 175px;
-      left: 15px;
-      font-size: 14px;
-      color: gray;
-  }
-  .totalCR{
-      position: absolute;
-      top: 175px;
-      left: 77px;
-      font-size: 14px;
-      color: green;
-  }
-  .colorBox1{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top:200px;
-    left: 15px;
-    background-color: red;
-  }
-  .colorBox2{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top:215px;
-    left: 15px;
-    background-color: rgb(175, 174, 174);
-  }
-  .colorBox3{
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    top:230px;
-    left: 15px;
-    background-color: green;
-  }
-  .tc{
-    position: absolute;
-    top:200px;
-    left: 30px;
-    font-size: 8px;
-    font-weight: normal;
-  }
-  .dc{
-    position: absolute;
-    top:215px;
-    left: 30px;
-    font-size: 8px;
-    font-weight: normal;
-  }
-  .rc{
-    position: absolute;
-    top:230px;
-    left: 30px;
-    font-size: 8px;
-    font-weight: normal;
-  }
-  .search{
-    position: absolute;
-    top: 185px;
-    height: 50px;
-    left: 30px;
-    width: 335px;
-    border-radius: 10px;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    outline: none;
-    padding-left: 10px;
-  }
-  ::placeholder {
-    color: rgba(134, 132, 132, 0.849);
-    font-size: 20px;
-    font-weight: bold;
-  }
   table {
     border-collapse: collapse;
     width: 85%;
@@ -228,1101 +108,351 @@
   th {
     background-color: white;
     color: black;
-    font-size: 16px
+    font-size: 16px;
   }
 
 
-
-  @media screen and (max-height: 640px) and (min-width: 360px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
+  @media screen and (min-width: 240px) {
+   
     .fa-arrow-left{
       font-size:34px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:25px;
+      left:25px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 455px;
-      width: 265px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 115px;
-      margin-left: 10px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
-      
-      .country{
-        top: 35px;
-        left: 115px;
-        color: black;
+      .nav-right{
+        width: 30px;
+        height: 30px;
         position: absolute;
-        font-size: 28px;
+        top: 16px;
+        left: 200px;
       }
-    .flag{
-      position: absolute;
-      top: 25px;
-      height: 60px;
-      width: 90px;
-      left: 20px;
-    }
-    .nav-right{
-      width: 52px;
-      height: 52px;
-      position: absolute;
-      top: 18px;
-      left: 290px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 30px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 28px;
-      left: 142px;
-      color: white;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      margin-top: 110px;
-      margin-left: 20px;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 6px;
-      font-size:14px;
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 14px;
-    }
+      .nav-head{
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 20px;
+        left: 105px;
+        color: white;
+      }
   }
-
-  @media screen and (max-height: 667px) and (min-width: 375px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
+  //done
+  @media screen and (min-width: 260px) {
     .fa-arrow-left{
-      font-size:34px;
+      font-size:30px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:17px;
+      left:15px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 455px;
-      width: 265px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 115px;
-      margin-left: 10px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
-      
-      .country{
-        top: 35px;
-        left: 115px;
-        color: black;
+      .nav-right{
+        width: 35px;
+        height: 35px;
         position: absolute;
-        font-size: 28px;
+        top: 15px;
+        left: 210px;
       }
-    .flag{
-      position: absolute;
-      top: 25px;
-      height: 60px;
-      width: 90px;
-      left: 20px;
-    }
-    .nav-right{
-      width: 52px;
-      height: 52px;
-      position: absolute;
-      top: 18px;
-      left: 290px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 30px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 28px;
-      left: 142px;
-      color: white;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      margin-top: 110px;
-      margin-left: 20px;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 6px;
-      font-size:14px;
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 14px;
-    }
+      .nav-head{
+        font-weight: bold;
+        font-size: 21px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 20px;
+        left: 110px;
+        color: white;
+      }
   }
 
-  @media screen and (max-height: 568px) and (min-width: 320px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
+  
+  @media screen and (min-width: 280px) {
+
     .fa-arrow-left{
-      font-size:34px;
+      font-size:30px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
-    }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 385px;
-      width: 235px;
-      left: 15px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 115px;
-      margin-left: 10px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
-      
-      .country{
-        top: 35px;
-        left: 115px;
-        color: black;
+      top:15px;
+      left:15px;
+    } 
+      .nav-right{
+        width: 30px;
+        height: 30px;
         position: absolute;
+        top: 10px;
+        left: 240px;
+      }
+      .nav-head{
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 14px;
+        left: 142px;
+        color: white;
+      }
+  }
+  
+  @media screen and (min-width: 300px) {
+    .fa-arrow-left{
+      font-size:30px;
+      color:white;
+      position: absolute;
+      top:15px;
+      left:15px;
+    }
+      .nav-right{
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: 15px;
+        left: 242px;
+      }
+      .nav-head{
+        font-weight: bold;
         font-size: 24px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 20px;
+        left: 127px;
+        color: white;
       }
-    .flag{
-      position: absolute;
-      top: 25px;
-      height: 50px;
-      width: 85px;
-      left: 20px;
-    }
-    .nav-right{
-      width: 52px;
-      height: 52px;
-      position: absolute;
-      top: 18px;
-      left: 252px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 30px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 25px;
-      left: 110px;
-      color: white;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      margin-top: 90px;
-      margin-left: 20px;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 6px;
-      font-size:14px;
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 12px;
-      font-weight: bold;
-    }
   }
-
-  @media screen and (max-width: 410px) and (min-width: 376px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-
-    }
+  //done
+  @media screen and (min-width: 320px) {
     .fa-arrow-left{
-      font-size:34px;
+      font-size:30px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:18px;
+      left:15px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    .days{
-        bottom: 20px;
-        left:10px;
+      .nav-right{
+        width: 40px;
+        height: 40px;
         position: absolute;
-    }
-    .btnDays{
-       border-radius: 30px;
-       background-color: white;
-       margin-left: 10px;
-       margin-right: 10px;
-       width: 60px;
-       height: 40px;
-    }
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 487px;
-      width: 300px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 130px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
+        top: 15px;
+        left: 266px;
       }
-      .circle{
-        margin-top: 35px;
-        margin-left: 290px;
+      .nav-head{
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 22px;
+        left: 166px;
+        color: white;
+      }
+  }
+  //done
+  @media screen and (min-width: 340px) {
+    .fa-arrow-left{
+      font-size:30px;
+      color:white;
+      position: absolute;
+      top:15px;
+      left:15px;
+    }
+      .nav-right{
         width: 45px;
         height: 45px;
-        border-radius: 30px;
-        //background-image: url("../../assets/img/coronalogo.png");
+        position: absolute;
+        top: 15px;
+        left: 275px;
       }
-      .events{
-        width: 70px;
-        height: 30px;
-        background-color: #f31c1c;
-        border-radius: 15px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      .nav-head{
+        font-weight: bold;
+        font-size: 24px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 23px;
+        left: 158px;
         color: white;
-        top: 35px;
-        left: 68px;
-        position: absolute;
-        font-size: 11px;
       }
-      .country{
-        top: 35px;
-        left: 135px;
-        color: black;
-        position: absolute;
-        font-size: 28px;
-      }
-    .flag{
-    position: absolute;
-    top: 20px;
-    height: 55px;
-    width: 90px;
-    left: 20px;
-    }
-    .nextIcon{
-      position: absolute;
-      top: 105px;
-      width: 65px;
-      left: 40px;
-    }
-    .date{
-      top: 80px;
-      left: 35px;
-      position: absolute;
-      color: white;
-      font-size: 14px;
-    }
-    .title{
-      position: absolute;
-      top: 115px;
-      left: 35px;
-      font-size: 25px;
-      color: white;
-    }
-    .totalCC{
-      position: absolute;
-      top: 135px;
-      left: 25px;
-      font-size: 27px;
-      color: red;
-    }
-    .totalCD{
-      position: absolute;
-        top: 175px;
-        left: 15px;
-        font-size: 14px;
-        color: gray;
-    }
-    .totalCR{
-        position: absolute;
-        top: 175px;
-        left: 77px;
-        font-size: 14px;
-        color: green;
-    }
-    .colorBox1{
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      top:200px;
-      left: 15px;
-      background-color: red;
-    }
-    .colorBox2{
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      top:215px;
-      left: 15px;
-      background-color: rgb(175, 174, 174);
-    }
-    .colorBox3{
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      top:230px;
-      left: 15px;
-      background-color: green;
-    }
-    .tc{
-      position: absolute;
-      top:200px;
-      left: 30px;
-      font-size: 8px;
-      font-weight: normal;
-    }
-    .dc{
-      position: absolute;
-      top:215px;
-      left: 30px;
-      font-size: 8px;
-      font-weight: normal;
-    }
-    .rc{
-      position: absolute;
-      top:230px;
-      left: 30px;
-      font-size: 8px;
-      font-weight: normal;
-    }
-    .search{
-      position: absolute;
-      top: 185px;
-      height: 50px;
-      left: 30px;
-      width: 335px;
-      border-radius: 10px;
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      outline: none;
-      padding-left: 10px;
-    }
-    ::placeholder {
-      color: rgba(134, 132, 132, 0.849);
-      font-size: 20px;
-      font-weight: bold;
-    }
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      margin-top: 130px;
-      margin-left: 20px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
-      
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 14px;
-    }
-  
   }
-
-  @media screen and (max-height: 767px) and (min-width: 411px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
+  @media screen and (min-width: 360px) {
+  
+    .fa-arrow-left{
+      font-size:30px;
+      color:white;
       position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
+      top:30px;
+      left:15px;
     }
+      .nav-right{
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        top: 18px;
+        left: 290px;
+      }
+      .nav-head{
+        font-weight: bold;
+        font-size: 30px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 28px;
+        left: 142px;
+        color: white;
+      }
+  }
+  
+  @media screen and (min-width: 360px) {
+
     .fa-arrow-left{
       font-size:34px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:25px;
+      left:25px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 535px;
-      width: 330px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 130px;
-      height: 580px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
+      .nav-right{
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        top: 18px;
+        left: 290px;
       }
+      .nav-head{
+        font-weight: bold;
+        font-size: 30px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 28px;
+        left: 142px;
+        color: white;
+      } 
+  }
+  @media screen and (min-width: 380px) {
+    .fa-arrow-left{
+      font-size:34px;
+      color:white;
+      position: absolute;
+      top:25px;
+      left:25px;
+    }
+      .nav-right{
+        width: 52px;
+        height: 52px;
+        position: absolute;
+        top: 18px;
+        left: 310px;
+      }
+      .nav-head{
+        font-weight: bold;
+        font-size: 30px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 28px;
+        left: 160px;
+        color: white;
+      }
+  }
+  @media screen and (min-width: 400px) {
+    .fa-arrow-left{
+      font-size:34px;
+      color:white;
+      position: absolute;
+      top:25px;
+      left:25px;
+    }
+      .nav-right{
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        top: 18px;
+        left: 320px;
+      }
+      .nav-head{
+        font-weight: bold;
+        font-size: 32px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 28px;
+        left: 167px;
+        color: white;
+      }
+
+  }
+  @media screen and (min-width: 420px) {
+    .fa-arrow-left{
+      font-size:34px;
+      color:white;
+      position: absolute;
+      top:35px;
+      left:25px;
+    }
+  
       .nav-right{
         width: 60px;
         height: 60px;
         position: absolute;
-        top: 20px;
-        left: 315px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 34px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 30px;
-      left: 145px;
-      color: white;
-    }
-      .country{
-        top: 35px;
-        left: 145px;
-        color: black;
-        position: absolute;
-        font-size: 30px;
+        top: 26px;
+        left: 336px;
       }
-    .flag{
-      position: absolute;
-      top: 20px;
-      height: 65px;
-      width: 100px;
-      left: 20px;
-    }
-   
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      margin-top: 110px;
-      margin-left: 20px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
+      .nav-head{
+        font-weight: bold;
+        font-size: 36px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 34px;
+        left: 165px;
+        color: white;
+      }
       
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 16px
-    }
-  
   }
-
-  @media screen and (min-height: 823px) and (min-width: 411px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
+  //done
+  @media screen and (min-width: 768px) {
     .fa-arrow-left{
       font-size:34px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:25px;
+      left:25px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 559px;
-      width: 330px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 130px;
-      height: 580px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
       .nav-right{
-        width: 65px;
-        height: 65px;
-        position: absolute;
-        top: 25px;
-        left: 315px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 35px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 35px;
-      left: 145px;
-      color: white;
-    }
-      .country{
-        top: 35px;
-        left: 145px;
-        color: black;
-        position: absolute;
-        font-size: 30px;
-      }
-    .flag{
-      position: absolute;
-      top: 20px;
-      height: 70px;
-      width: 100px;
-      left: 20px;
-    }
-   
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      margin-top: 130px;
-      margin-left: 20px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
-      
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 16px
-    }
-  
-  }
-
-  @media screen and (max-height: 1024px) and (min-width: 768px) {
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .fa-arrow-left{
-      font-size:34px;
-      color:white;
-      position: absolute;
-      top:30px;
-      left: 20px;
-    }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    .days{
-        bottom: 20px;
-        left:10px;
-        position: absolute;
-    }
-    .btnDays{
-       border-radius: 30px;
-       background-color: white;
-       margin-left: 10px;
-       margin-right: 10px;
-       width: 60px;
-       height: 40px;
-    }
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 590px;
-      width: 440px;
-      left: 110px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 200px;
-      height: 600px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
-      .circle{
-        margin-top: 80px;
-        margin-left: 450px;
         width: 80px;
         height: 80px;
-        border-radius: 40px;
-        //background-image: url("../../assets/img/coronalogo.png");
+        position: absolute;
+        top: 34px;
+        left: 650px;
       }
-      .events{
-        width: 110px;
-        height: 45px;
-        background-color: #f31c1c;
-        border-radius: 20px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      .nav-head{
+        font-weight: bold;
+        font-size: 44px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 48px;
+        left: 440px;
         color: white;
-        top: 80px;
-        left: 170px;
-        position: absolute;
       }
-      .country{
-        top: 60px;
-        left: 240px;
-        color: black;
-        position: absolute;
-        font-size: 36px;
-      }
-    .flag{
-      position: absolute;
-      top: 40px;
-      height: 95px;
-      width: 160px;
-      left: 30px;
-    }
-    .date{
-      top: 140px;
-      left: 120px;
-      position: absolute;
-      color: white;
-      font-size: 18px;
-    }
-    .title{
-      position: absolute;
-      top: 190px;
-      left: 120px;
-      font-size: 40px;
-      color: white;
-    }
-    table {
-      border-collapse: collapse;
-      width: 85%;
-      margin-top: 160px;
-      margin-left: 20px;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
-      font-size: 22px;
-      
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 22px;
-    }
-  
+   
   }
-
-  @media screen and (max-height: 812px) and (min-width: 375px)  and (min-height:790px){
-    #container {
-      text-align: center;
-      background: linear-gradient(to bottom, #42275a 0%, #734b6d 100%);
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
+  //done
+  @media screen and (min-width: 1024px) {
     .fa-arrow-left{
       font-size:34px;
       color:white;
       position: absolute;
-      top:30px;
-      left: 20px;
+      top:32px;
+      left:25px;
     }
-    #container strong {
-      font-size: 20px;
-      line-height: 26px;
-    }
-    
-    #container p {
-      font-size: 16px;
-      line-height: 22px;
-    
-      color: #8c8c8c;
-    
-      margin: 0;
-    }
-    
-    #container a {
-      text-decoration: none;
-    }
-    
-    ion-content ion-toolbar {
-      --background: translucent;
-    }
-    
-    .card{
-      background-color: white;
-      font-weight: bold;
-      height: 498px;
-      width: 280px;
-      left: 25px;
-      margin-top: 0px;
-      border-radius: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .scrolling-wrapper {
-      overflow-x: hidden;
-      overflow-y: scroll;
-      white-space: nowrap;
-      margin-top: 140px;
-      margin-left: 10px;
-      height: 600px;
-      
-    }
-    
-    ::-webkit-scrollbar {
-      display: none;
-      }
-      
-      .country{
-        top: 35px;
-        left: 115px;
-        color: black;
+      .nav-right{
+        width: 105px;
+        height: 105px;
         position: absolute;
-        font-size: 28px;
+        top: 34px;
+        left: 860px;
       }
-    .flag{
-      position: absolute;
-      top: 25px;
-      height: 70px;
-      width: 100px;
-      left: 20px;
-    }
-    .nav-right{
-      width: 56px;
-      height: 56px;
-      position: absolute;
-      top: 18px;
-      left: 290px;
-    }
-    .nav-head{
-      font-weight: bold;
-      font-size: 30px;
-      font-family: "Convergence";
-      position: absolute;
-      top: 28px;
-      left: 142px;
-      color: white;
-    }
+      .nav-head{
+        font-weight: bold;
+        font-size: 80px;
+        font-family: "Convergence";
+        position: absolute;
+        top: 45px;
+        left: 480px;
+        color: white;
+      }
 
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      margin-top: 140px;
-      margin-left: 20px;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 8px;
-      font-size:14px;
-    }  
-    th {
-      background-color: white;
-      color: black;
-      font-size: 14px;
-    }
   }
-
+  
