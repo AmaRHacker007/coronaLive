@@ -30,6 +30,17 @@ export class ListComponent implements OnInit {
     }  
  }
   ngOnInit() {
+
+
+    $(document).ready(function($) {
+      if (window.history && window.history.pushState) {
+        window.history.pushState('forward', null, '/list');
+        $(window).on('popstate', function() {
+          window.location.href = "/home";
+        });
+      }
+    });
+
     var today = new Date();
     this.day=today.getDate();
     this.year=today.getFullYear();
@@ -212,6 +223,8 @@ export class ListComponent implements OnInit {
   }
   
   back(){
+    //this.router.navigate(['/home']);
     window.location.href = "/home";
   }
+  
 }

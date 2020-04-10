@@ -53,6 +53,7 @@ export class HomePage implements OnInit{
     }  
  }
   ngOnInit() {
+
     var today = new Date();
     this.day=today.getDate();
     this.year=today.getFullYear();
@@ -162,7 +163,6 @@ export class HomePage implements OnInit{
   SendData(value){
     localStorage.setItem('index',value);
     this.router.navigate(['/info']);
-    //console.log(localStorage.getItem('index'));
   }
 
 }

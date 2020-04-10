@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit{
   c5TotalCC=0;
   c5TotalCR=0;
   c5TotalCD=0;
-  constructor(private router: Router,private _httpService:HomeService){ }
+  constructor(private router: Router,private _httpService:HomeService){}
   sortByProperty(property){  
     return function(a,b){  
        if(a[property] > b[property])  
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit{
        return 0;  
     }  
  }
-  ngOnInit() {
+  ngOnInit() { 
     var today = new Date();
     this.day=today.getDate();
     this.year=today.getFullYear();
@@ -162,7 +162,6 @@ export class HomeComponent implements OnInit{
   SendData(value){
     localStorage.setItem('index',value);
     this.router.navigate(['/info']);
-    //console.log(localStorage.getItem('index'));
   }
 
 }
